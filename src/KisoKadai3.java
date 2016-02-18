@@ -13,12 +13,12 @@ class KisoKadai3{
 		File file1, file2, file3;
 		int int1;
 
-			System.out.println("シャッツキステへようこそ");
+			System.out.println("書き込みとか");
 
 			while(true){
 				try{
 
-				System.out.println("どのメイドを指名しますか？番号で指名してください。\n1:新規作成 2:上書き 3:追記 4:読み込み 5:終了");
+				System.out.println("なにをしますか？番号で指名してください。\n1:ファイルを新規作成 2:上書き 3:追記 4:読み込み 5:終了");
 				str1 = br.readLine();
 				int1 = Integer.parseInt(str1);
 
@@ -28,7 +28,7 @@ class KisoKadai3{
 					fw1 = new FileWriter(file3);
 					fw1.write(br.readLine());
 					fw1.close();
-					System.out.println("書き込めたよ");
+					System.out.println("書きこんだよ");
 					takaya();
 
 				}else if(int1 == 2){
@@ -37,7 +37,7 @@ class KisoKadai3{
 					fw1 = new FileWriter(file3);
 					fw1.write(br.readLine());
 					fw1.close();
-					System.out.println("書き込めたよ");
+					System.out.println("書きこんだよ");
 					takaya();
 
 				}else if(int1 == 3){
@@ -46,7 +46,7 @@ class KisoKadai3{
 					fw1 = new FileWriter(file3, true);
 					fw1.write(br.readLine());
 					fw1.close();
-					System.out.println("書き込めたよ");
+					System.out.println("書きこんだよ");
 					takaya();
 
 				}else if(int1 == 4){
@@ -62,6 +62,8 @@ class KisoKadai3{
 				}else if(int1 == 5){
 					System.out.println("ばいばい");
 					System.exit(0);
+				}else{
+					System.out.println("1から5で入力しなおしてね");
 				}
 
 				}catch(Exception e){
@@ -130,8 +132,9 @@ class KisoKadai3{
 			str2 = br.readLine();
 			file1 = new File(str2);
 			if(!file1.exists()){
+
+				System.out.println("フォルダがありません。作成しますか？yes or no");
 				while(true){
-					System.out.println("フォルダがありません。作成しますか？yes or no");
 					str1 = br.readLine();
 					String y = "yes", n = "no";
 					if(str1.equals(y)){
@@ -140,8 +143,8 @@ class KisoKadai3{
 						o++;
 						break;
 					}else if(str1.equals(n)){
-						System.out.println("フォルダ名を入力しなおしてね");
-						break;
+						System.out.println("ばいばい");
+						System.exit(0);
 
 					}else{
 						System.out.println("yes か no で入力しなおしてね");
