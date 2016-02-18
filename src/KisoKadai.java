@@ -12,7 +12,7 @@ public class KisoKadai {
 		System.out.println("九九表を出力します");
 		System.out.println("表の横の最大値を入力してください");
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
+
 		x = br.readLine();
 
 		System.out.println("表の縦の最大値を入力してください");
@@ -30,7 +30,7 @@ public class KisoKadai {
 
 			}
 			System.out.println();
-			System.out.print(i - 1 + " ");
+//			System.out.print(i - 1 + " ");
 		}
 		}catch(Exception e){
 			System.out.println("error");

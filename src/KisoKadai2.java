@@ -14,7 +14,7 @@ public class KisoKadai2 {
 
 
 			rand = (int)(Math.random() * 100 + 1);
-			System.out.println(rand);
+//			System.out.println(rand);
 
 			while(end == 0){
 				try{
